@@ -28,7 +28,7 @@
 // Bodge wire to TRRS data pin
 &nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; };
 
-chosen {
+/chosen {
     zmk_underglow = &led_strip;
 };
 
