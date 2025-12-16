@@ -28,9 +28,6 @@
 // Bodge wire to TRRS data pin
 &nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; };
 
-/chosen {
-    zmk_underglow = &led_strip;
-};
 
 / {
     // Activate ADJUST layer by pressing raise and lower
@@ -42,7 +39,9 @@
             then-layer = <ADJUST>;
         };
     };
-
+    chosen {
+    zmk_underglow = &led_strip;
+    };
     keymap {
         compatible = "zmk,keymap";
 
