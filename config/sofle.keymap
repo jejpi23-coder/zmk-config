@@ -20,6 +20,16 @@
 //     chain-length = <36>;
 // };
 
+&nice_nano_i2c {
+    status = "okay";
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <64>;
+    };
+};
+
 // Bodge wire to TRRS data pin
 &nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; };
 
