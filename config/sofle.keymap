@@ -16,9 +16,10 @@
 #define ADJUST 3
 
 // Indicator + Drop Lighting (Underglow) + Backlight
-// &led_strip {
-//     chain-length = <36>;
-// };
+
+&led_strip {
+    chain-length = <36>;
+};
 
 
 
