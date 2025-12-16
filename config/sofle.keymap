@@ -18,7 +18,10 @@
 // Indicator + Drop Lighting (Underglow) + Backlight
 
 &led_strip {
-    chain-length = <36>;
+     compatible = "zmk,led-strip";
+    chain-length = <36>;          // liczba LEDów
+    label = "LED0";               // etykieta używana w keymapie
+    data-gpios = <&pro_micro 1>;  // pin danych, jeśli używasz GPIO
 };
 
 
