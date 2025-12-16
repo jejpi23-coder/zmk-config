@@ -18,16 +18,19 @@
 // Indicator + Drop Lighting (Underglow) + Backlight
 
 &led_strip {
-     compatible = "zmk,led-strip";
-    chain-length = <36>;          // liczba LEDów
-    label = "LED0";               // etykieta używana w keymapie
-    data-gpios = <&pro_micro 1>;  // pin danych, jeśli używasz GPIO
+    compatible = "zmk,led-strip";
+    chain-length = <36>;
+    label = "LED0";
 };
 
 
 
 // Bodge wire to TRRS data pin
 &nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; };
+
+chosen {
+    zmk_underglow = &led_strip;
+};
 
 / {
     // Activate ADJUST layer by pressing raise and lower
